@@ -29,7 +29,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 */
 
 var path = require('path'),
-    sys  = require('sys'),
+    sys  = require('util'),
     fs   = require('fs');
 
 var makeArray = function(nonarray) { 
@@ -40,7 +40,7 @@ var makeArray = function(nonarray) {
 // if `log_file_path` is null, log to STDOUT.
 var Logger = function(log_file_path) {
   // default write is STDOUT
-  this.write     = sys.print;
+  this.write     = console.log;
   this.log_level_index = 3;
   
   // if a path is given, try to write to it
@@ -95,7 +95,7 @@ Logger.prototype.log = function() {
       }
     });
     message = this.format(Logger.levels[log_index], new Date(), message);
-    this.write(message + "\n");
+    this.write(message);
     return message;
   }
   return false;
