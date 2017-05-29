@@ -1,7 +1,9 @@
-{ "name" : "logger"
+{
+  "name" : "logger"
 , "version" : "0.0.1"
-, "description" : "A simple logging library that combines the simple APIs of Ruby's logger.rb and browser-js console.log()"
+, "description" : "A simple logging library that combines the simple APIs of Ruby's logger.rb and browser-js console.log(). [forked repo]"
 , "author" : "Aaron Quint <aaron@quirkey.com>"
 , "main" : "logger"
 , "engines" : { "node" : ">=0.1.90" }
+, "repository" : { "type" : "git" , "url" : "https://github.com/xstdio/node-logger.git" }
 }
