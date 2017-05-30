@@ -89,9 +89,9 @@ Logger.prototype.log = function() {
     // join the arguments into a loggable string
     args.forEach(function(arg) {
       if (typeof arg === 'string') {
-        message += ' ' + arg;
+        message += '' + arg;
       } else {
-        message += ' ' + sys.inspect(arg, false, null);
+        message += '' + sys.inspect(arg, false, null);
       }
     });
     message = this.format(Logger.levels[log_index], new Date(), message);
