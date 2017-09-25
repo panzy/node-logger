@@ -5,5 +5,5 @@
 , "author" : "Aaron Quint <aaron@quirkey.com>"
 , "main" : "logger"
 , "engines" : { "node" : ">=0.1.90" }
-, "repository" : { "type" : "git" , "url" : "https://github.com/xstdio/node-logger.git" }
+, "repository" : { "type" : "git" , "url" : "https://github.com/panzy/node-logger.git" }
 }
