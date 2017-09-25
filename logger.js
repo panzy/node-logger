@@ -60,7 +60,7 @@ Logger.levels = ['fatal', 'error', 'warn', 'info', 'debug'];
 //    error [Sat Jun 12 2010 01:12:05 GMT-0400 (EDT)] message
 // 
 Logger.prototype.format = function(level, date, message) {
-  return [level, ' [', date, '] ', message].join('');
+  return [level, ' [', date, ']', message].join('');
 };
 
 // Set the maximum log level. The default level is "info".
@@ -89,9 +89,9 @@ Logger.prototype.log = function() {
     // join the arguments into a loggable string
     args.forEach(function(arg) {
       if (typeof arg === 'string') {
-        message += '' + arg;
+        message += ' ' + arg;
       } else {
-        message += '' + sys.inspect(arg, false, null);
+        message += ' ' + sys.inspect(arg, false, null);
       }
     });
     message = this.format(Logger.levels[log_index], new Date(), message);
